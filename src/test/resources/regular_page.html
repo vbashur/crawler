@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="http://backbonejs.org"/>
+    <title>Backbone.js</title>
+</head>
+<body>
+
+<script src="test/vendor/underscore.js"></script>
+<script src="test/vendor/jquery.js"></script>
+<script src="docs/js/jquery.lazyload.js"></script>
+<script src="test/vendor/json2.js"></script>
+<script src="backbone.js"></script>
+<script src="docs/search.js"></script>
+<script src="https://www.googletagservices.com/dcm/dcmads.js"></script>
+
+<script>
+
+    $(function () {
+        $('.runnable').each(function () {
+            var code = this;
+            var button = '<div class="run" title="Run"></div>';
+            $(button).insertBefore(code).bind('click', function () {
+                eval($(code).text());
+            });
+        });
+        $('[data-original]').lazyload();
+    });
+</script>
+
+</body>
+</html>
